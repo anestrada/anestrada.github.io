@@ -4,7 +4,7 @@
 function getDbConn() {
   $host = 'localhost'; // cuz in C9
   $dbname = 'smartdecisions';
-  $username = 'hoconnell';
+  $username = 'root';
   $password = '';
 
 // condition for connecting in Heroku

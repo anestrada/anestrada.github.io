@@ -1,16 +1,15 @@
 <?php
 
-// include 'dbConn.php';
-// $dbConn = getDbConn();
+include 'dbConn.php';
+$dbConn = getDbConn();
 
-// // arrays
-// $categoryName = [];
-// $insurance = [];
-// $networking = [];
-// $training = [];
+// arrays
+$categoryName = [];
+$insurance = [];
+$networking = [];
+$training = [];
 
-// // get category names and types
-// $dbConn = getDbConn();
+// get category names and types
 
 // $sql = "SELECT categoryName, categoryType
 //         FROM r_category";

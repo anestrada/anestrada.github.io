@@ -11,13 +11,13 @@ $training = [];
 
 // get category names and types
 
-$sql = "SELECT categoryName, categoryType
-        FROM r_category";
+// $sql = "SELECT categoryName, categoryType
+//         FROM r_category";
         
-$stmt = $dbConn->prepare($sql);
-$stmt->execute();
+// $stmt = $dbConn->prepare($sql);
+// $stmt->execute();
 
-$records = $stmt -> fetchAll(PDO::FETCH_ASSOC);
+// $records = $stmt -> fetchAll(PDO::FETCH_ASSOC);
 
 // // create category arrays
 // foreach($records as $r) {

@@ -11,48 +11,48 @@ $training = [];
 
 // get category names and types
 
-// $sql = "SELECT categoryName, categoryType
-//         FROM r_category";
+$sql = "SELECT categoryName, categoryType
+        FROM r_category";
         
-// $stmt = $dbConn->prepare($sql);
-// $stmt->execute();
+$stmt = $dbConn->prepare($sql);
+$stmt->execute();
 
-// $records = $stmt -> fetchAll(PDO::FETCH_ASSOC);
+$records = $stmt -> fetchAll(PDO::FETCH_ASSOC);
 
-// // create category arrays
-// foreach($records as $r) {
-//   switch($r['categoryType']) {
-//       case 'Insurance':
-//           array_push($insurance, $r['categoryName']);
-//           break;
-//       case 'Networking':
-//           array_push($networking, $r['categoryName']);
-//           break;
-//       case 'Training':
-//           array_push($training, $r['categoryName']);
-//           break;
-//       default:
-//   }
-// }
+// create category arrays
+foreach($records as $r) {
+  switch($r['categoryType']) {
+      case 'Insurance':
+          array_push($insurance, $r['categoryName']);
+          break;
+      case 'Networking':
+          array_push($networking, $r['categoryName']);
+          break;
+      case 'Training':
+          array_push($training, $r['categoryName']);
+          break;
+      default:
+  }
+}
 
-// // create category buttons
-// function makeSearch($arr, $type) {
-//   foreach($arr as $a) {
-//       switch($type) {
-//         case 'insurance':
-//           $color = 'success';
-//           break;
-//         case 'networking':
-//           $color = 'primary';
-//           break;
-//         case 'training':
-//           $color = 'info';
-//           break;
-//       }
+// create category buttons
+function makeSearch($arr, $type) {
+  foreach($arr as $a) {
+      switch($type) {
+        case 'insurance':
+          $color = 'success';
+          break;
+        case 'networking':
+          $color = 'primary';
+          break;
+        case 'training':
+          $color = 'info';
+          break;
+      }
       
-//       echo '<a href="#" class="btn btn-' . $color . ' ' . $type . ' filter">' . $a . '</a>';
-//   }
-// }
+      echo '<a href="#" class="btn btn-' . $color . ' ' . $type . ' filter">' . $a . '</a>';
+  }
+}
 
 ?>
 

@@ -17,8 +17,8 @@ if(strpos($_SERVER['HTTP_HOST'], 'herokuapp') !== false) {
   $password = $url["pass"];
 }
   
-$dbConn = new PDO("mysql:host=us-cdbr-iron-east-04.cleardb.net; dbname=heroku_aa669eecf247fce", 'bb68a999e44046', '1ccc8911');
-  // $dbConn = new PDO("mysql:host=$host; dbname=$dbname", $username, $password);
+// $dbConn = new PDO("mysql:host=us-cdbr-iron-east-04.cleardb.net; dbname=heroku_aa669eecf247fce", 'bb68a999e44046', '1ccc8911');
+  $dbConn = new PDO("mysql:host=$host; dbname=$dbname", $username, $password);
   $dbConn -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
   return $dbConn;
